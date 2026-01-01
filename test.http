@@ -1,0 +1,14 @@
+### 测试 1: 获取图片列表 (应该是空的)
+GET http://localhost:3000/api/images
+
+### 测试 2: 上传一张图片
+POST http://localhost:3000/api/images
+Content-Type: application/json
+
+{
+  "url": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e",
+  "prompt": "A futuristic cyberpunk city with neon lights"
+}
+
+### 测试 3: 再次获取列表 (应该能看到刚才那张图)
+GET http://localhost:3000/api/images
